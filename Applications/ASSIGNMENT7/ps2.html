@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEasy – Basic E-Commerce Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="logo">ShopEasy</h1>
+    <input id="search" type="search" placeholder="Search products" aria-label="Search products" />
+    <button id="cart-toggle" class="cart-btn" aria-label="Open cart">
+      Cart <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <section class="controls">
+    <label>Category
+      <select id="category"><option value="all">All</option></select>
+    </label>
+    <label>Sort by
+      <select id="sort">
+        <option value="default">Featured</option>
+        <option value="low">Price: low to high</option>
+        <option value="high">Price: high to low</option>
+        <option value="rating">Rating</option>
+      </select>
+    </label>
+    <p id="result-count" aria-live="polite"></p>
+  </section>
+
+  <main>
+    <p id="status" class="status">Loading products...</p>
+    <div id="products" class="grid"></div>
+  </main>
+
+  <aside id="cart" class="cart" aria-label="Shopping cart" hidden>
+    <div class="cart-head">
+      <h2>Your cart</h2>
+      <button id="cart-close" aria-label="Close cart">Close</button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-foot">
+      <p>Total: <strong id="cart-total">$0.00</strong></p>
+      <button id="clear-cart" class="secondary">Clear cart</button>
+      <button id="checkout">Checkout</button>
+    </div>
+  </aside>
+  <div id="overlay" class="overlay" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<script src="./ps2.js"></script>

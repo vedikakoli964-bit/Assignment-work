@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+  <title>Student Management System</title>
+  <script src="./studentmanagment.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; max-width: 800px; }
+    form { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    input { padding: 8px; font-size: 14px; }
+    button { padding: 8px 12px; cursor: pointer; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    th { background-color: #f4f4f4; }
+    .status-msg { margin: 10px 0; font-weight: bold; }
+    .error { color: red; }
+    .loading { color: blue; }
+  </style>
+</head>
+<body>
+
+  <h2>Student Management System</h2>
+  <h3>Add New Student</h3>
+  <form id="studentForm">
+    <input type="text" id="name" placeholder="Name" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="text" id="course" placeholder="Course" required />
+    <input type="number" id="age" placeholder="Age" required min="1" />
+    <button type="submit">Add Student</button>
+  </form>
+>
+  <h3>Student List</h3>
+  <input type="text" id="search" placeholder="Search by Name or Course..." style="width: 100%; box-sizing: border-box;" />
+  <div id="statusMessage" class="status-msg"></div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Course</th>
+        <th>Age</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="studentTableBody">
+    </tbody>
+  </table>
+</body>
+</html>
